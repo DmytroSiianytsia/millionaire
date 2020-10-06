@@ -1,0 +1,21 @@
+.container {
+  position: relative;
+  max-width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  
+  font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 978px) {
+  .container {
+    max-width: 96%;
+    min-height: 100vh;
+  }
+}

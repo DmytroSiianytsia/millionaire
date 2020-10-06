@@ -1,0 +1,34 @@
+.btn {
+  width: 296px;
+  height: 64px;
+
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  line-height: 1.16;
+
+  border: 0;
+  border-radius: 12px;
+  outline: none;
+
+  color: #ffffff;
+  background: #FF8B37;
+  cursor: pointer;
+
+  &:hover {
+    background: #FFAC70;
+  }
+
+  &:focus {
+    background: #E87928;
+  }
+}
+
+@media (max-width: 768px) {
+ .btn {
+   width: 288px;
+   height: 48px;
+
+   font-size: 14px;
+ }
+}
