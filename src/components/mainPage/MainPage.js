@@ -45,25 +45,44 @@ export default function MainPage({ updateTotalScore, changeFinishGame, changeSta
     </div>
   ).reverse()
 
+  function finishGame() {
+    setTimeout(() => {
+      changeActiveClass('')
+      changeFinishGame(true)
+      changeStartGame(false)
+    }, 1500)
+  }
+
+  function addCorrectClass() {
+    setTimeout(() => {
+      changeActiveClass('correct')
+    }, 500)
+  }
+
+  function addWrongClass() {
+    setTimeout(() => {
+      changeActiveClass('wrong')
+    }, 500)
+  }
+
   function checkAnswer(isCorrect) {
-    if (isCorrect && (level < 11)) {
-      setTimeout(() => {
-        changeActiveClass('correct')
-      }, 500)
+    if (isCorrect && (level < 12)) {
+
+      if (level === 11) {
+        updateTotalScore(dataJson.money[level])
+        addCorrectClass()
+        finishGame()
+      } 
+      
+      addCorrectClass()
       setTimeout(() => {
         changeActiveClass('')
         changeLevel(level => level + 1)
       }, 1500)
     } else {
       updateTotalScore(dataJson.money[level - 1] || 0)
-      setTimeout(() => {
-        changeActiveClass('wrong')
-      }, 500)
-      setTimeout(() => {
-        changeActiveClass('')
-        changeFinishGame(true)
-        changeStartGame(false)
-      }, 1500)
+      addWrongClass()
+      finishGame()
     }
   }
  
