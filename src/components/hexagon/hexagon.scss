@@ -1,0 +1,214 @@
+.hexagon {
+  position: relative;
+  width: 373px;
+  height: 72px;
+  border: 0;   
+
+  &__svg-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 17px;
+      height: 1px;
+
+      position: absolute;      
+      top: 50%;
+      transform: translateY(-50%);
+      
+      background: #d0d0d8;
+    }
+
+    &::before {
+      left: -16px;
+    }
+
+    &::after {
+      right: -16px;
+    }
+  }
+
+  &__svg-wrap:hover {
+    &::before,
+    &::after {
+      background: #ff8b37;
+    }
+  }
+
+  &__img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    cursor: pointer;
+  } 
+
+  &__img:hover path {    
+    stroke: #ff8b37;
+  }
+
+  &__text {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 7%;
+     
+    font-size: 20px;
+    line-height: 1;
+    transform: translateY(-50%);
+
+    & span {
+      display: inline-block;
+      margin-right: 8px;
+
+      font-size: 20px;
+      font-weight: 600;
+
+      color: #ff8b37;
+    }
+  }
+}
+
+.hexagon--levels { 
+  width: 200px;
+  height: 40px; 
+  pointer-events: none;
+  
+  .hexagon {
+    &__text {
+      font-size: 14px;
+      left: 50%;      
+      transform: translate(-50%, -50%);
+    }
+      
+    &__svg-wrap::before,
+    &__svg-wrap::after {
+      width: 100px;
+    }
+  
+    &__svg-wrap::before {
+      left: -100px;
+    }
+  
+    &__svg-wrap::after {
+      right: -100px;
+    }
+  }  
+}
+
+.active {
+  .hexagon__text {
+    color: #ff8b37
+  }
+
+  .hexagon__svg-wrap {
+    &::before,
+    &::after {
+      background: #ff8b37;
+    }
+  }
+
+  path {
+    stroke: #ff8b37;
+  }
+}
+
+.solved {
+  .hexagon__text {
+    color: #d0d0d8
+  }
+}
+
+.correct {
+  .hexagon__svg-wrap {
+    &::before,
+    &::after {
+      background: #47d867;
+    }
+  }
+
+  path {
+    fill: #e6faea;
+    stroke: #47d867;
+  }
+}
+
+.wrong {
+  .hexagon__svg-wrap {
+    &::before,
+    &::after {
+      background: #ec6259;
+    }
+  }
+
+  path {
+    fill: #fdeeed;
+    stroke: #ec6259;
+  }
+}
+
+.selected {
+  .hexagon__svg-wrap {
+    &::before,
+    &::after {
+      background: #ff8b37;
+    }
+  }
+
+  path {
+    fill: #fff3eb;
+    stroke: #ff8b37;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hexagon {
+    width: 288px;
+    height: 56px;    
+  }
+
+  .hexagon--levels {
+    width: 200px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 978px) and (orientation:landscape) {
+  .hexagon {
+    width: 240px;
+    height: 46px
+  }
+}
+
+@media (max-width: 812px) {
+  .hexagon {
+    &__text {
+      font-size: 14px;
+      & span {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .hexagon--levels {
+    width: 160px;
+    height: 22px;
+
+    .hexagon__text {
+      font-size: 12px;
+    }
+
+    .hexagon__svg-wrap::before {
+      left: -77px;
+    }
+  
+    .hexagon__svg-wrap::after {
+      right: -77px;
+    }
+  }
+}
