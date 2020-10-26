@@ -1,130 +1,139 @@
 {
   "questions": [
-  {
-    "id": 1,
-    "question": "Сколько будет 2 + 5?",
-    "answers": [
-      {"answer": 9, "isTrue": false},
-      {"answer": 8, "isTrue": false},
-      {"answer": 5, "isTrue": false},
-      {"answer": 7, "isTrue": true}
-    ]
-  },
-  {
-    "id": 2,
-    "question": "Сколько будет 7 + 5?",
-    "answers": [
-      {"answer": 13, "isTrue": false},
-      {"answer": 16, "isTrue": false},
-      {"answer": 8, "isTrue": false},
-      {"answer": 12, "isTrue": true},
-      {"answer": 8, "isTrue": false},
-      {"answer": 12, "isTrue": true}
-    ]
-  },  
-  {
-    "id": 3,
-    "question": "Сколько будет 2 + 2?",
-    "answers": [      
-      {"answer": 14, "isTrue": false},
-      {"answer": 25, "isTrue": false},
-      {"answer": 4, "isTrue": true}
-    ]
-  },
-  {
-    "id": 4,
-    "question": "Сколько будет 7 + 15?",
-    "answers": [
-      {"answer": 23, "isTrue": false},
-      {"answer": 16, "isTrue": false},
-      {"answer": 18, "isTrue": false},
-      {"answer": 22, "isTrue": true}
-    ]
-  },  
-  {
-    "id": 5,
-    "question": "Сколько будет 14 + 15?",
-    "answers": [
-      {"answer": 31, "isTrue": false},
-      {"answer": 24, "isTrue": false},
-      {"answer": 25, "isTrue": false},
-      {"answer": 29, "isTrue": true}
-    ]
-  },
-  {
-    "id": 6,
-    "question": "Сколько будет 17 + 25?",
-    "answers": [
-      {"answer": 43, "isTrue": false},
-      {"answer": 46, "isTrue": false},
-      {"answer": 48, "isTrue": false},
-      {"answer": 42, "isTrue": true}
-    ]
-  },  
-  {
-    "id": 7,
-    "question": "Сколько будет 33 + 44?",
-    "answers": [
-      {"answer": 76, "isTrue": false},
-      {"answer": 14, "isTrue": false},
-      {"answer": 83, "isTrue": false},
-      {"answer": 77, "isTrue": true}
-    ]
-  },
-  {
-    "id": 8,
-    "question": "Сколько будет 26 + 38?",
-    "answers": [
-      {"answer": 63, "isTrue": false},
-      {"answer": 56, "isTrue": false},
-      {"answer": 68, "isTrue": false},
-      {"answer": 64, "isTrue": true}
-    ]
-  },  
-  {
-    "id": 9,
-    "question": "Сколько будет 77 + 88?",
-    "answers": [
-      {"answer": 166, "isTrue": false},
-      {"answer": 149, "isTrue": false},
-      {"answer": 125, "isTrue": false},
-      {"answer": 165, "isTrue": true}
-    ]
-  },
-  {
-    "id": 10,
-    "question": "Сколько будет 78 + 84?",
-    "answers": [
-      {"answer": 163, "isTrue": false},
-      {"answer": 164, "isTrue": false},
-      {"answer": 182, "isTrue": false},
-      {"answer": 162, "isTrue": true}
-    ]
-  },  
-  {
-    "id": 11,
-    "question": "Сколько будет 92 + 85?",
-    "answers": [
-      {"answer": 187, "isTrue": false},
-      {"answer": 174, "isTrue": false},
-      {"answer": 159, "isTrue": false},
-      {"answer": 177, "isTrue": true}
-    ]
-  },
-  {
-    "id": 12,
-    "question": "Сколько будет 97 + 95?",
-    "answers": [
-      {"answer": 193, "isTrue": false},
-      {"answer": 196, "isTrue": false},
-      {"answer": 198, "isTrue": false},
-      {"answer": 192, "isTrue": true}
-    ]
-  }  
+    {
+      "id": 1,
+      "question": "Что дети кричат хором на новогоднем празднике?",
+      "answers": [
+        { "answer": "Спасите-помогите!", "isTrue": false },
+        { "answer": "Дед Мороз!", "isTrue": false },
+        { "answer": "Шайбу, шайбу!", "isTrue": false },
+        { "answer": "Снегурочка!", "isTrue": true }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "До какого события продолжается рождественский пост?",
+      "answers": [
+        { "answer": "До заката", "isTrue": false },
+        { "answer": "До рассвета", "isTrue": false },
+        { "answer": "До первых петухов", "isTrue": false },
+        { "answer": "До первой звезды", "isTrue": true }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Где, если верить пословице, любопытной Варваре нос оторвали?",
+      "answers": [
+        { "answer": "В магазине", "isTrue": false },
+        { "answer": "В офисе", "isTrue": false },
+        { "answer": "На площади", "isTrue": false },
+        { "answer": "На базаре", "isTrue": true }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "За чем послала жена мужа в мультфильме 'Падал прошлогодний снег'?",
+      "answers": [
+        { "answer": "За спичками", "isTrue": false },
+        { "answer": "За хлебом", "isTrue": false },
+        { "answer": "За сапогами", "isTrue": false },
+        { "answer": "За ёлкой", "isTrue": true }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "В какую одежду принято плакать, чтобы вызвать сочувствие?",
+      "answers": [
+        { "answer": "В пальто", "isTrue": false },
+        { "answer": "В куртку", "isTrue": false },
+        { "answer": "В рубашку", "isTrue": false },
+        { "answer": "В жилетку", "isTrue": true }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Что испанцы съедают в новогоднюю полночь с каждым ударом часов?",
+      "answers": [
+        { "answer": "Оливку", "isTrue": false },
+        { "answer": "Мандаринку", "isTrue": false },
+        { "answer": "Финик", "isTrue": false },
+        { "answer": "Виноградинку", "isTrue": true }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "Каким предметом китайцы стараются не пользоваться в преддверии Нового года, чтобы не разрушить счастья?",
+      "answers": [
+        { "answer": "Палочки", "isTrue": false },
+        { "answer": "Вилка", "isTrue": false },
+        { "answer": "Ложка", "isTrue": false },
+        { "answer": "Нож", "isTrue": true }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Какой цвет получается при смешении синего и красного?",
+      "answers": [
+        { "answer": "Зеленый", "isTrue": false },
+        { "answer": "Оранжевый", "isTrue": false },
+        { "answer": "Бордовый", "isTrue": false },
+        { "answer": "Фиолетовый", "isTrue": true }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Из какого мяса традиционно готовится начинка для чебуреков?",
+      "answers": [
+        { "answer": "Телятина", "isTrue": false },
+        { "answer": "Свинина", "isTrue": false },
+        { "answer": "Конина", "isTrue": false },
+        { "answer": "Баранина", "isTrue": true }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "В какой стране была пробурена первая промышленная нефтяная скважина?",
+      "answers": [
+        { "answer": "США", "isTrue": false },
+        { "answer": "Ирак", "isTrue": false },
+        { "answer": "Иран", "isTrue": false },
+        { "answer": "Азербайджан", "isTrue": true }
+      ]
+    },
+    {
+      "id": 11,
+      "question": "Какой алкогольный напиток делается из ячменя?",
+      "answers": [
+        { "answer": "Пиво", "isTrue": false },
+        { "answer": "Ром", "isTrue": false },
+        { "answer": "Джин", "isTrue": false },
+        { "answer": "Виски", "isTrue": true }
+      ]
+    },
+    {
+      "id": 12,
+      "question": "Какой орган человека не функционирует до его рождения?",
+      "answers": [
+        { "answer": "Мозг", "isTrue": false },
+        { "answer": "Почки", "isTrue": false },
+        { "answer": "Печень", "isTrue": false },
+        { "answer": "Легкие", "isTrue": true }
+      ]
+    }
   ],
   "money": [
-    500, 1000, 2000, 4000, 8000, 16000, 32000,
-    64000, 125000, 250000, 500000, 1000000
+    500,
+    1000,
+    2000,
+    4000,
+    8000,
+    16000,
+    32000,
+    64000,
+    125000,
+    250000,
+    500000,
+    1000000
   ],
   "answerOptions": ["A", "B", "C", "D", "E", "F"]
 }

@@ -5,7 +5,11 @@ import './mainPage.scss'
 import Hexagon from '../hexagon/Hexagon'
 import Burger from '../burger/Burger'
 
-export default function MainPage({ updateTotalScore, changeFinishGame, changeStartGame }) {
+export default function MainPage({
+  updateTotalScore,
+  changeFinishGame,
+  changeStartGame,
+}) {
   const [answers, getAnswers] = useState('')
   const [indexClickedElem, changeIndexClickedElem] = useState('')
   const [level, changeLevel] = useState(0)
@@ -16,21 +20,20 @@ export default function MainPage({ updateTotalScore, changeFinishGame, changeSta
     return dataJson.questions[level].question
   }
 
-  const levels = dataJson.money.map((item, index) =>
-    <div
-      className="main-page__level"
-      key={index}
-    >
-      <Hexagon
-        text={`$${item}`}
-        mod={`
+  const levels = dataJson.money
+    .map((item, index) => (
+      <div className="main-page__level" key={index}>
+        <Hexagon
+          text={`$${item}`}
+          mod={`
           hexagon--levels
           ${index === level && 'active'}
           ${index < level && 'solved'}
         `}
-      />
-    </div>
-  ).reverse()
+        />
+      </div>
+    ))
+    .reverse()
 
   function finishGame() {
     setTimeout(() => {
@@ -53,29 +56,27 @@ export default function MainPage({ updateTotalScore, changeFinishGame, changeSta
   }
 
   function getElementsAnswers(arr) {
-    return arr.map(
-      (item, index) =>
-        <div
-          className={`main-page__answer`}
-          key={index}
-          onClick={() => {
-            checkAnswer(item.isTrue, index)
-          }}
-        >
-          <Hexagon
-            variant={dataJson.answerOptions[index]}
-            text={item.answer}
-            mod={indexClickedElem === index && activeClass}
-          />
-        </div>
-    )
+    return arr.map((item, index) => (
+      <div
+        className={`main-page__answer`}
+        key={index}
+        onClick={() => {
+          checkAnswer(item.isTrue, index)
+        }}
+      >
+        <Hexagon
+          variant={dataJson.answerOptions[index]}
+          text={item.answer}
+          mod={indexClickedElem === index && activeClass}
+        />
+      </div>
+    ))
   }
 
   function checkAnswer(isCorrect, index) {
     changeIndexClickedElem(index)
     changeActiveClass('selected')
-    if (isCorrect && (level < 12)) {
-
+    if (isCorrect && level < 12) {
       if (level === 11) {
         updateTotalScore(dataJson.money[level])
         addCorrectClass()
@@ -85,7 +86,7 @@ export default function MainPage({ updateTotalScore, changeFinishGame, changeSta
       addCorrectClass()
       setTimeout(() => {
         changeActiveClass('')
-        changeLevel(level => level + 1)
+        changeLevel((level) => level + 1)
       }, 2000)
     } else {
       updateTotalScore(dataJson.money[level - 1] || 0)
@@ -109,7 +110,9 @@ export default function MainPage({ updateTotalScore, changeFinishGame, changeSta
         </div>
       </div>
       <div className={`main-page__levels ${levelsForMobile}`}>
-        <div className="close" onClick={() => showLevels('')}>&times;</div>
+        <div className="close" onClick={() => showLevels('')}>
+          &times;
+        </div>
         {levels}
       </div>
     </div>

@@ -1,4 +1,4 @@
-.end-page {  
+.end-page {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,9 +11,10 @@
   }
 
   &__img {
-    display: block;    
+    display: block;
     width: 100%;
     max-width: 624px;
+    margin: 0 auto;
   }
 
   &__content {
@@ -50,8 +51,8 @@
     &__score {
       margin-bottom: 40px;
       font-size: 40px;
-    }    
-  }  
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -74,10 +75,10 @@
     &__score {
       font-size: 32px;
     }
-  }  
+  }
 }
 
-@media (max-width: 978px) and (orientation:landscape) {
+@media (max-width: 978px) and (orientation: landscape) {
   .end-page__image {
     width: 30%;
   }
